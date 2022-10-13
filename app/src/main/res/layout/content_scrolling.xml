@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ScrollingActivity"
+    tools:showIn="@layout/activity_scrolling">
+
+    <!--Layaout en vertical que contendrá las cards-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--Primera card-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardTesla"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/common_margin_min"
+            android:layout_marginStart="@dimen/common_margin_min"
+            android:layout_marginEnd="@dimen/common_margin_min"
+
+            android:visibility="visible">
+
+            <!--Layout que esta dentro de la card-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingTop="@dimen/common_padding_default"
+                android:paddingStart="@dimen/common_padding_default"
+                android:paddingEnd="@dimen/common_padding_default">
+
+                <ImageView
+                    android:id="@+id/imgCardTesla"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/card_img_size"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/cardTitleTesla"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Nikola Tesla"
+
+                    app:layout_constraintStart_toStartOf="@+id/imgCardTesla"
+                    app:layout_constraintTop_toBottomOf="@+id/imgCardTesla"
+
+                    android:layout_marginStart="@dimen/common_padding_default"
+                    android:textAppearance="?attr/textAppearanceHeadline5" />
+
+                <TextView
+                    android:id="@+id/cardDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/descTesla"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+
+                    app:layout_constraintStart_toStartOf="@id/cardTitleTesla"
+                    app:layout_constraintTop_toBottomOf="@id/cardTitleTesla"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnIrTesla"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/card_btn_ir"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardDescription"
+                    app:icon="@drawable/ic_link"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--Segunda card-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardLovelace"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/common_margin_min"
+            android:layout_marginStart="@dimen/common_margin_min"
+            android:layout_marginEnd="@dimen/common_margin_min"
+
+            android:visibility="visible">
+
+            <!--Layout que esta dentro de la card-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingTop="@dimen/common_padding_default"
+                android:paddingStart="@dimen/common_padding_default"
+                android:paddingEnd="@dimen/common_padding_default">
+
+                <ImageView
+                    android:id="@+id/imgCardLovelace"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/card_img_size"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/cardTitleLovelace"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Ada Lovelace"
+
+                    app:layout_constraintStart_toStartOf="@+id/imgCardLovelace"
+                    app:layout_constraintTop_toBottomOf="@+id/imgCardLovelace"
+
+                    android:layout_marginStart="@dimen/common_padding_default"
+                    android:textAppearance="?attr/textAppearanceHeadline5" />
+
+                <TextView
+                    android:id="@+id/cardDescriptionLovelace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/descLovelace"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+
+                    app:layout_constraintStart_toStartOf="@id/cardTitleLovelace"
+                    app:layout_constraintTop_toBottomOf="@id/cardTitleLovelace"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnIrLovelace"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/card_btn_ir"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardDescriptionLovelace"
+                    app:icon="@drawable/ic_link"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--Tercera card-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardBabbage"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/common_margin_min"
+            android:layout_marginStart="@dimen/common_margin_min"
+            android:layout_marginEnd="@dimen/common_margin_min"
+
+            android:visibility="visible">
+
+            <!--Layout que esta dentro de la card-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingTop="@dimen/common_padding_default"
+                android:paddingStart="@dimen/common_padding_default"
+                android:paddingEnd="@dimen/common_padding_default">
+
+                <ImageView
+                    android:id="@+id/imgCardBabbage"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/card_img_size"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/cardTitleBabbage"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Charles Babbage"
+
+                    app:layout_constraintStart_toStartOf="@+id/imgCardBabbage"
+                    app:layout_constraintTop_toBottomOf="@+id/imgCardBabbage"
+
+                    android:layout_marginStart="@dimen/common_padding_default"
+                    android:textAppearance="?attr/textAppearanceHeadline5" />
+
+                <TextView
+                    android:id="@+id/cardDescriptionBabbage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/descBabbage"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+
+                    app:layout_constraintStart_toStartOf="@id/cardTitleBabbage"
+                    app:layout_constraintTop_toBottomOf="@id/cardTitleBabbage"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnIrBabbage"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/card_btn_ir"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardDescriptionBabbage"
+                    app:icon="@drawable/ic_link"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--Cuarta card-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardMusk"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/common_margin_min"
+            android:layout_marginStart="@dimen/common_margin_min"
+            android:layout_marginEnd="@dimen/common_margin_min"
+
+            android:visibility="visible">
+
+            <!--Layout que esta dentro de la card-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingTop="@dimen/common_padding_default"
+                android:paddingStart="@dimen/common_padding_default"
+                android:paddingEnd="@dimen/common_padding_default">
+
+                <ImageView
+                    android:id="@+id/imgCardMusk"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/card_img_size"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/cardTitleMusk"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Elon Musk"
+
+                    app:layout_constraintStart_toStartOf="@+id/imgCardMusk"
+                    app:layout_constraintTop_toBottomOf="@+id/imgCardMusk"
+
+                    android:layout_marginStart="@dimen/common_padding_default"
+                    android:textAppearance="?attr/textAppearanceHeadline5" />
+
+                <TextView
+                    android:id="@+id/cardDescriptionMusk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/descMusk"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+
+                    app:layout_constraintStart_toStartOf="@id/cardTitleMusk"
+                    app:layout_constraintTop_toBottomOf="@id/cardTitleMusk"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnIrMusk"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/card_btn_ir"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardDescriptionMusk"
+                    app:icon="@drawable/ic_link"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
